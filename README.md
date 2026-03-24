@@ -1,23 +1,18 @@
-# chat_bot_ISS
+    # chat_bot_ISS
 
-## Description
-Prototype chatbot that surfaces ISS information.
+    Prototype chatbot that surfaces live ISS information via public APIs.
 
-## Features
-- Fetches ISS data and responds to user queries.
-- Simple conversational flow for experimentation.
+    ## Architecture
+    - Data fetch: polls an ISS location API for latitude/longitude and metadata.
+    - Bot logic: simple intent parsing to answer “where is the ISS?” or similar queries.
+    - Interface: CLI or lightweight web/Node entrypoint (check repo files).
 
-## Technologies Used
-- JavaScript/Node.js (scripts), web APIs.
+    ## Setup & Run
+    - Requires Node.js. If a package.json exists, run `npm install` then the documented start script; otherwise run the main JS file with `node`.
 
-## Installation
-- Install Node.js; run `npm install` if package files exist.
+    ## Notes
+    - External API calls require network; handle rate limits and failures gracefully.
+    - Consider caching the last position to avoid hammering the API on repeated queries.
 
-## Usage
-- Execute the bot script or service entrypoint noted in the repo.
-
-## Example
-- Query current ISS position and return altitude results.
-
-## Author
-- Oualid Obbad (@oualidobbad)
+    ## Author
+    Oualid Obbad (@oualidobbad)
